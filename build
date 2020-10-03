@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cp pkgs rootdir/root/.pkgs
+cd mklive
+make clean 
+make
+./mklive.sh -a x86_64 -I ../rootdir -p "dialog $(cat ../pkgs)" -T "$(cat ../name)"
+version=$(xbps-query linux -p pkgver)
+cd ..
