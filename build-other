@@ -1,0 +1,4 @@
+wget http://alpha.de.repo.voidlinux.org/static/xbps-static-latest.x86_64-musl.tar.xz
+mkdir XBPS
+tar xvf xbps-static-latest.x86_64.tar.xz -C XBPS
+export PATH=XBPS/usr/bin:$PATH
